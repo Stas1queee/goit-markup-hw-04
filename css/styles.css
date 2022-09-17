@@ -8,9 +8,10 @@
   --filters-color: #f5f4fa;
   --addinational-background-color: #eeeeee;
   --links-color: rgba(255, 255, 255, 0.6);
-  --border-color: #ECECEC;
+  --border-color: #ececec;
+  --fill-color: #afb1b8;
 }
-/*   основний колір тексту  #757575 */ 
+/*   основний колір тексту  #757575 */
 /* вторинний колір тексту #212121 */
 /* білий #FFFFFF */
 /* акцент #2196F3 */
@@ -71,6 +72,18 @@ li {
 .auth-nav {
   display: flex;
   align-items: center;
+}
+.auth-nav svg {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+.auth-nav svg:hover {
+  fill: var(--accent-color);
+}
+.auth-nav .tel {
+  width: 10px;
+  height: 16px;
 }
 .page-container {
   display: flex;
@@ -139,6 +152,8 @@ li {
   text-align: center;
   color: var(--background-color-header);
   background-color: var(--dark-background-color);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(/images/img-hero.jpg);
 }
 .hero-title {
   width: 696px;
@@ -170,7 +185,19 @@ li {
   gap: 30px;
   display: flex;
 }
-
+.main-list div {
+  background-color: var(--addinational-background-color);
+  width: 270px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.main-list svg {
+  width: 70px;
+  height: 70px;
+}
 .main-list li {
   width: 270px;
 }
@@ -237,7 +264,38 @@ main .main {
   display: flex;
   gap: 30px;
 }
-.list-title-list li {
+.list-title-list .social-links {
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  width: 206px;
+  height: 44px;
+  margin-bottom: 30px;
+}
+.list-title-list svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--fill-color);
+}
+.social-link {
+  display: block;
+  height: 44px;
+  border-radius: 50%;
+  padding: 12px;
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+  fill: var(--background-color-header);
+}
+.social-link:hover svg,
+.social-link:focus svg {
+  fill: var(--background-color-header);
+}
+
+.list-title-list .mate {
   text-align: center;
   width: 270px;
   /* shadows */
@@ -265,6 +323,44 @@ main .main {
   line-height: 1.87;
 }
 
+/* Clients */
+.clients-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+  color: var(--secondary-text-color);
+}
+.client-logo {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.client-logo svg {
+  fill: var(--fill-color);
+  width: 106px;
+  height: 60px;
+}
+.logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--fill-color);
+  border-radius: 4px;
+}
+.logo-box:hover,
+.logo-box:focus {
+  border-color: var(--accent-color);
+}
+
+.logo-box:hover svg,
+.logo-box:focus svg {
+  fill: var(--accent-color);
+}
 /* page 2 */
 
 .buttons-list li:not(:first-child) {
@@ -283,9 +379,10 @@ main .main {
 }
 .btn-page:hover,
 .btn-page:focus {
-    cursor: pointer;
+  cursor: pointer;
   background-color: var(--accent-color);
   color: var(--background-color-header);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .buttons-list {
   display: flex;
@@ -301,7 +398,11 @@ main .main {
 }
 .portfolio li {
   background-color: var(--background-color-header);
-
+}
+.port-link:hover,
+.port-link:focus{
+display: block;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .port-box {
   padding: 20px 24px;
@@ -313,7 +414,42 @@ main .main {
   padding: 60px 0px;
   background-color: var(--dark-background-color);
 }
-.contacts-list{
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+.our-socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.thumb {
+  margin-left: 70px;
+}
+.footer-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.07;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--background-color-header);
+}
+.our-socials svg {
+  width: 44px;
+  height: 44px;
+  fill: var(--background-color-header);
+}
+.our-socials a {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius:  50%;
+}
+.our-socials a:hover,
+.our-socials a:focus {
+  background-color: var(--accent-color);
+}
+.contacts-list {
   margin-top: 20px;
 }
 .logo-footer {
@@ -325,7 +461,7 @@ main .main {
   text-decoration: none;
   font-style: normal;
 }
-.contacts-list li:not(:last-child){
+.contacts-list li:not(:last-child) {
   margin-bottom: 9px;
 }
 .footer .link-to {
