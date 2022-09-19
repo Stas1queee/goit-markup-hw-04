@@ -82,10 +82,6 @@ li {
   width: 10px;
   height: 16px;
 }
-.auth-nav a {
-  display: block;
-}
-
 .link :hover .env{
   color:var(--accent-color);
 }
@@ -139,7 +135,8 @@ li {
   margin-right: 0;
 }
 .auth-nav .link {
-  display: block;
+  display: flex;
+  align-items: center;
   color: var(--primary-text-color);
   fill:var(--fill-color)
 }
